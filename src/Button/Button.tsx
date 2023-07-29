@@ -1,5 +1,7 @@
 import React from "react";
 
+import * as S from './styles'
+
 import "./Button.css";
 
 export interface ButtonProps extends React.ComponentProps<"button"> {
@@ -8,6 +10,6 @@ export interface ButtonProps extends React.ComponentProps<"button"> {
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
  ({ kind = "primary", ...props }, ref) => {
-   return <button data-button={`kind:${kind}`} ref={ref} {...props} />;
+    return <S.Wrapper data-button={`kind:${kind}`} ref={ref} {...props} />;
  },
 );
